@@ -44,6 +44,7 @@ public class JobConfiguration {
                     @Override
                     public RepeatStatus execute(StepContribution contribution, ChunkContext chunkContext) throws Exception {
                         logger.debug("This is a debug message");
+                        System.out.println("PARSE DATA");
                         LogResponse logResponse=(importData.parseResponse("activities"));
                         exportData.writeFileForUpload(logResponse.getResults());
                         return RepeatStatus.FINISHED;
