@@ -40,9 +40,12 @@ public class Result {
     String userType;
     // user name inside th user object nested in json
     String userName;
+    /**
+     * The description is mapped to this objecy
+     */
     @JsonUnwrapped
     Action action;
-    
+
 
     public Action getAction() {
         return action;
